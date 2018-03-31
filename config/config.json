@@ -1,0 +1,22 @@
+{
+  "port": 3000,
+  "mongoose": {
+    "uri": "mongodb://max:UD1wz6w2k24l@ds229909.mlab.com:29909/ankidb2",
+    "options": {
+      "server": {
+        "socketOptions": {
+          "keepAlive": 1
+        }
+      }
+    }
+  },
+  "session": {
+    "secret": "tMpxZB8JfWPm",
+    "key": "sid",
+    "cookie": {
+      "path": "/",
+      "httpOnly": true,
+      "maxAge": null
+    }
+  }
+}
