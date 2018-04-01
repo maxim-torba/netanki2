@@ -32,7 +32,20 @@ app.use(session({
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/words', wordsRouter);
+// app.use('/words', wordsRouter);
+
+
+//test db
+const Word = require('./db/models/Word');
+app.use('/words', (req, res) => {
+    Word.find({}, (err, words) => {
+        if (err) throw err;
+        console.log(`${words.length} words returned to ${req.headers.referer}`);
+        res.end(JSON.stringify(words));
+    })
+});
+///
+
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '/client/build/index.html'));

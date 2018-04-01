@@ -15,7 +15,7 @@ app.get('/', function (req, res, next) {
         }
         else {
             res.statusCode = 404;
-            return res.send({error: 'word can not find'});
+            return res.send({error: 'word is not find'});
         }
     });
 });
@@ -30,7 +30,7 @@ app.get('/zerintrv', function (req, res) {
             }
             else {
                 res.statusCode = 404;
-                return res.send({error: 'word can not find'});
+                return res.send({error: 'word is not find'});
             }
         })
         .catch(function (err) {
@@ -46,7 +46,7 @@ app.get('/getall', function (req, res) {
             }
             else {
                 res.statusCode = 404;
-                return res.send({error: 'words can not find'});
+                return res.send({error: 'words is not find'});
             }
         })
         .catch(function (err) {
@@ -64,7 +64,7 @@ app.get('/trainingwords', function (req, res) {
         }
         else {
             res.statusCode = 404;
-            return res.send({error: 'word can not find'});
+            return res.send({error: 'word is not find'});
         }
     });
 });
@@ -88,7 +88,7 @@ app.post('/', function (req, res) {
         })
         .catch(function (err) {
             console.log(err);
-            if (err.name == 'ValidationError') {
+            if (err.name === 'ValidationError') {
                 res.statusCode = 400;
                 res.send({error: 'Validation error'});
             } else {

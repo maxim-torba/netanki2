@@ -3,11 +3,11 @@ var mongoose = require('mongoose');
 var Word = new mongoose.Schema({
     userId: {
         type: String,
-        required: true
+        // required: true
     },
     word: {
         type: String,
-        required: true
+        // required: true
     },
     transcription: {
         type: String
