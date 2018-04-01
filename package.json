@@ -6,11 +6,11 @@
     "node": "9.9.0"
   },
   "scripts": {
-    "install": "cd client && npm install",
+    "install": "cd client && yarn install",
     "start": "node ./bin/www",
     "nodemon": "nodemon ./bin/www",
-    "start-client": "cd client && npm start",
-    "heroku-postbuild": "cd client && npm run build"
+    "start-client": "cd client && yarn start",
+    "heroku-postbuild": "cd client && yarn run build"
   },
   "dependencies": {
     "body-parser": "^1.18.2",

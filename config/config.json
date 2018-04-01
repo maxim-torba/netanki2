@@ -1,5 +1,5 @@
 {
-  "port": 3000,
+  "port": 5000,
   "mongoose": {
     "uri": "mongodb://max:UD1wz6w2k24l@ds229909.mlab.com:29909/ankidb2",
     "options": {
