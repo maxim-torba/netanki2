@@ -30,8 +30,8 @@ app.use(session({
     store: sessionStore
 }));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+// app.use('/', indexRouter);
+// app.use('/users', usersRouter);
 // app.use('/words', wordsRouter);
 
 
