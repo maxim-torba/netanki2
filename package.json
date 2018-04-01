@@ -2,12 +2,15 @@
   "name": "netanki2.0",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": "9.9.0"
+  },
   "scripts": {
     "install": "cd client && npm install",
     "start": "node ./bin/www",
     "nodemon": "nodemon ./bin/www",
     "start-client": "cd client && npm start",
-    "heroku-postbuild": "cd client && npm --production=true && npm run build"
+    "heroku-postbuild": "cd client && npm run build"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
