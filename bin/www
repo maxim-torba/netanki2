@@ -12,13 +12,11 @@ const config = require('../config');
 
 const server = http.createServer(app);
 
-let port = normalizePort(config.get('port') || '3000');
-
-app.set('port', port);
+const port = normalizePort(config.get('port') || '3000');
 
 const server_port = process.env.PORT || port;
-const server_ip_address = process.env.IP || '127.0.0.1';
 
+app.set('port', server_port);
 
 server.listen(server_port);
 server.on('error', onError);
